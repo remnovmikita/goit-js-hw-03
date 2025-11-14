@@ -1,8 +1,10 @@
-function makeArray(firstArray, secondArray, maxLength){
- let newArray = []; 
- newArray = firstArray.concat(secondArray);
-
- return newArray.slice(0, maxLength);
+function makeArray(firstArray , secondArray , maxLength){
+     let newArray = firstArray.concat(secondArray);
+     if (newArray.length <= maxLength){
+        return newArray;
+     } else{
+        return newArray.slice(0, maxLength);
+     }
 }
 
 
